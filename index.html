@@ -7,29 +7,20 @@
 <body>
 <script>
 
-    function truncateString(str, num) {
 
-        if (str.length > num) {
-            var result = str.split("");
-            if (num <= 3) {
-                for (var i = (num + 1); i <= str.length; i++) {
-                    result[i] = "";
-                }
-                result[num] = "...";
-            }
-            if (num > 3) {
-                for (var i = (num - 2); i < str.length; i++) {
-                    result[i] = "";
-                }
-                result[num - 3] = "...";
-            }
-            return result.join("");
-        }
-        return str;
-    }
 
-    document.write(truncateString("Absolutely Longer", 2));
 
+    //get sum of array
+    var array = [4, 5, 6, 7, 8];
+    var singleVal = 0;
+    singleVal = array.reduce(function (previousVal, currentVal) {
+        return previousVal + currentVal;
+    }, 0);
+
+
+    //return all values less than 6
+    var oldArray = [1,2,3,4,5,6,7,8,9,10];
+    var newArray = oldArray.filter(function(val){return val < 6;});
 
 </script>
 
