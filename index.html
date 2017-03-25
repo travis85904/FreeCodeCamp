@@ -8,17 +8,15 @@
 hhht
 <script type="text/javascript">
 
-    function titleCase(str) {
-        var strArray = str.toLowerCase().split(" ");
-        for(var i = 0; i < strArray.length; i++){
-            strArray[i] = strArray[i].charAt(0).toUpperCase() + strArray[i].substring(1);
-        }
-        str = strArray.join(" ");
-        return str;
+
+    function chunkArrayInGroups(arr, size) {
+        // Break it up.
+        return arr;
     }
 
-    document.write(titleCase("I'm a little tea pot"));
-    document.write("<p>this is a tt</p>");
+    chunkArrayInGroups(["a", "b", "c", "d"], 2);
+
+
 </script>
 
 
