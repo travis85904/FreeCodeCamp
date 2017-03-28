@@ -1,29 +1,39 @@
+<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
 <!DOCTYPE html>
-<html lang="en">
 <head>
+    <link rel="stylesheet" type="text/css" href="IndexStyle.css">
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Cat Photo App</title>
 </head>
 <body>
-<script>
 
+<h2 class="red-text">CatPhotoApp</h2>
+<p>View more <a href="http://www.freecatphotoapp.com"><img class="smaller-image thick-green-border"
+                                                           src="https://bit.ly/fcc-relaxing-cat"
+                                                           alt="a picture of a cat"></a></p>
+<div class="silver-background">
+    <p>Things cats love:</p>
+    <ul><!--Bullet list-->
+        <li>cat nip</li>
+        <li>laser pointers</li>
+        <li>lasagna</li>
+    </ul>
+    <p>Top 3 things cats hate:</p>
+    <ol><!--Numbered list-->
+        <li>dogs</li>
+        <li>water</li>
+        <li>loud noises</li>
+    </ol>
+</div>
+<form action="/submit-cat-photo" id="cat-photo-form">
 
-
-
-    //get sum of array
-    var array = [4, 5, 6, 7, 8];
-    var singleVal = 0;
-    singleVal = array.reduce(function (previousVal, currentVal) {
-        return previousVal + currentVal;
-    }, 0);
-
-
-    //return all values less than 6
-    var oldArray = [1,2,3,4,5,6,7,8,9,10];
-    var newArray = oldArray.filter(function(val){return val < 6;});
-
-</script>
-
-
+    <p><label><input type="radio" name="indoor-outdoor" checked>Indoor</label></p>
+    <p><label><input type="radio" name="indoor-outdoor">Outdoor</label></p>
+    <label><input type="checkbox" name="personality" checked> Loving</label>
+    <label><input type="checkbox" name="personality"> Lazy</label>
+    <label><input type="checkbox" name="personality"> Energetic</label>
+    <input type="text" required placeholder="cat photo URL">
+    <button type="submit">Submit</button>
+</form>
 </body>
 </html>
