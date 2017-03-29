@@ -1,3 +1,7 @@
+.container-fluid{
+
+}
+
 .silver-background {
     background-color: silver;
 }
@@ -10,7 +14,7 @@
 }
 
 .red-text {
-    color: red;
+    color: red !important;/* !important is a manual override */
 }
 
 .smaller-image {
@@ -19,6 +23,13 @@
 
 #cat-photo-form {
     background-color: green;
+}
+
+/* hashtag symbol makes the class an ID
+id="orange-text"
+ID classes override tage classes, and name classes */
+#orange-text {
+    color: orange;
 }
 
 p {

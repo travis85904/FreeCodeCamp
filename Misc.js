@@ -42,10 +42,7 @@ largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 85
 
 //Check string ending
 function confirmEnding(str, target) {
-    if (str.substr(-target.length) === target)//substr, index to start from. ('-target.length' is treated as str.length-target.length.)
-        return true;
-
-    return false;
+    return str.substr(-target.length) === target;
 }
 
 document.write(confirmEnding("Bastian", "n"));

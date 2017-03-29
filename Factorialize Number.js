@@ -1,10 +1,10 @@
 function factorialize(num) {
     var factorialize = 1;
-    var array = new Array;
+    var array = [];
     for (var i = 1; i <= num; i++) {
         array.push(i);
     }
-    for (var i = 0; i < num - 1; i++) {
+    for (var j = 0; j < num - 1; j++) {
         factorialize += array[i] * factorialize;
     }
     return factorialize;
