@@ -1,10 +1,4 @@
-.container-fluid{
 
-}
-
-.silver-background {
-    background-color: silver;
-}
 
 .thick-green-border {
     border-color: green;
@@ -38,5 +32,5 @@ p {
 }
 
 h2 {
-    font-family: lobster;
+    font-family: lobster, Monospace;
 }

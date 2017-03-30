@@ -1,64 +1,108 @@
 <!DOCTYPE html>
+<script>
+    $(document).ready(function () {
+        $("#photoButtons").addClass("btn btn-block");
+
+    })
+</script>
 <html>
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/>
+<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+<head>
+
+    <link rel="stylesheet" type="text/css" href="IndexStyle.css">
+    <meta charset="UTF-8">
+    <title>Cat Photo App</title>
+
+</head>
+<body>
 <div class="container-fluid">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/>
-    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
-    <head>
-
-        <link rel="stylesheet" type="text/css" href="IndexStyle.css">
-        <meta charset="UTF-8">
-        <title>Cat Photo App</title>
-    </head>
-    <body>
-
-    <h2 class="red-text text-center">CatPhotoApp</h2>
-
-    <p>View more <a href="http://www.freecatphotoapp.com"><img class="smaller-image thick-green-border"
-                                                               src="https://bit.ly/fcc-relaxing-cat"
-                                                               alt="a picture of a cat"></a></p>
-
-    <img src="https://bit.ly/fcc-running-cats" class="img-responsive">
 
     <div class="row">
-        <div class="col-xs-4">
-            <button class="btn btn-primary">Like</button>
+        <div class="col-xs-8">
+            <h2 class="text-primary text-center">CatPhotoApp</h2>
         </div>
+
         <div class="col-xs-4">
-            <button class="btn btn-info">Info</button>
+            <a href="#"><img class="img-responsive thick-green-border" src="https://bit.ly/fcc-relaxing-cat"
+                             alt="A cute orange cat lying on its back. "></a>
         </div>
-        <div class="col-xs-4">
-            <button class="btn btn-danger">Delete</button>
-        </div>
+
     </div>
 
-    <p>Things cats love:</p>
-    <ul><!--Bullet list-->
+
+    <img src="https://bit.ly/fcc-running-cats" class="img-responsive" alt="Three kittens running towards the camera. ">
+
+    <div class="row">
+
+        <div class="col-xs-4">
+            <button class="btn-primary" id="photoButtons"><i class="fa fa-thumbs-up"></i>Like</button>
+        </div>
+
+        <div class="col-xs-4">
+            <button class="btn-info" id="photoButtons"><i class="fa fa-info-circle"></i>Info</button>
+        </div>
+
+        <div class="col-xs-4">
+            <button class="btn-danger" id="photoButtons"><i class="fa fa-trash"></i>Delete</button>
+        </div>
+
+    </div>
+
+
+    <p>Things cats <span class="text-danger">love:</span></p>
+    <ul>
         <li>cat nip</li>
         <li>laser pointers</li>
         <li>lasagna</li>
     </ul>
 
     <p>Top 3 things cats hate:</p>
-    <ol><!--Numbered list-->
-        <li>dogs</li>
-        <li>water</li>
-        <li>loud noises</li>
+    <ol>
+        <li>flea treatment</li>
+        <li>thunder</li>
+        <li>other cats</li>
     </ol>
 
-    <form action="/submit-cat-photo" id="cat-photo-form">
 
-        <p><label><input type="radio" name="indoor-outdoor" checked>Indoor</label></p>
-        <p><label><input type="radio" name="indoor-outdoor">Outdoor</label></p>
+    <form action="/submit-cat-photo">
 
-        <label><input type="checkbox" name="personality" checked> Loving</label>
-        <label><input type="checkbox" name="personality"> Lazy</label>
-        <label><input type="checkbox" name="personality"> Energetic</label>
+        <div class="row">
 
-        <input type="text" required placeholder="cat photo URL">
+            <div class="col-xs-6">
+                <label><input type="radio" name="indoor-outdoor"> Indoor</label></div>
 
-        <button type="submit">Submit</button>
+            <div class="col-xs-6">
+                <label><input type="radio" name="indoor-outdoor"> Outdoor</label></div>
+        </div>
 
+        <div class="row">
+            <div class="col-xs-4">
+                <label><input type="checkbox" name="personality"> Loving</label></div>
+
+            <div class="col-xs-4">
+                <label><input type="checkbox" name="personality"> Lazy</label></div>
+
+            <div class="col-xs-4">
+                <label><input type="checkbox" name="personality"> Crazy</label></div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col-xs-7">
+                <input type="text" class="form-control" placeholder="cat photo URL" required></div>
+
+            <div class="col-xs-5">
+                <button type="submit" class="btn btn-primary"><i class="fa fa-paper-plane"></i> Submit</button>
+
+            </div>
+        </div>
     </form>
-    </body>
+
 </div>
+
+</body>
+
 </html>
